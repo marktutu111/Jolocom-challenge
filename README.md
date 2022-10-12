@@ -4,7 +4,8 @@ Create a “Collapsible” scroll component, which behaves in the following way:
 
 
 # How the Application was created
-# Download the react-native typescript starter template
+Download the react-native typescript starter template
+
 1. npx react-native init jolocom --template react-native-template-typescript
 
 
