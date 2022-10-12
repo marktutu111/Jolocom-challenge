@@ -32,7 +32,12 @@ export default function FormPage(props:any) {
         form.age!=='' &&
         form.phone!=='' &&
         form.email!==''
-      ){setDisabled(false);}else{setDisabled(true)}
+      ){
+        const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(form.email?.match(validRegex)){
+          setDisabled(false);
+        }
+      }else{setDisabled(true)}
    }
 
    const updateForm=(d:IForm)=>{
