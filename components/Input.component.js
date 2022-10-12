@@ -6,9 +6,10 @@ export default function InputComponent(props) {
   return (
     <View style={[styles.input,{borderColor:focused?'#000':'#ccc'}]}>
         <TextInput
-            style={{lineHeight:25}}
+            style={{lineHeight:25,fontSize:20}}
             onFocus={()=>setFocused(true)}
             onBlur={()=>setFocused(false)}
+            ref={props.inputRef}
             {...props}
         />
     </View>
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
         borderWidth:1,
         padding:15,
         borderRadius:5,
-        marginVertical:8,
+        marginVertical:6,
         backgroundColor:'#eee'
     }
 })

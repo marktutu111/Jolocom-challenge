@@ -3,7 +3,11 @@ import React from 'react'
 
 export default function ButtonComponent(props:any) {
   return (
-    <TouchableOpacity style={[styles.but,props.style]} onPress={props.onPress}>
+    <TouchableOpacity 
+      style={[styles.but,props.style,{backgroundColor:props.disabled?'#6d6d6d':'#000'}]} 
+      onPress={props.onPress}
+      disabled={props.disabled}
+    >
         <Text style={styles.txt}>{props.title}</Text>
     </TouchableOpacity>
   )
@@ -12,7 +16,6 @@ export default function ButtonComponent(props:any) {
 
 const styles = StyleSheet.create({
     but:{
-        backgroundColor:'#000',
         justifyContent:'center',
         alignItems:'center',
         padding:10,

@@ -8,14 +8,15 @@
  * @format
  */
 
-import React, {useRef} from 'react';
+import React, {useRef,useState} from 'react';
 import {
   Animated,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
-  Dimensions
+  Dimensions,
+  KeyboardAvoidingView
 } from 'react-native';
 import HeaderBarComponent from './components/HeaderBar.component';
 import AlertPage from './pages/Alert.page';
@@ -25,6 +26,7 @@ const {height}=Dimensions.get('screen');
 
 const App=()=>{
 
+  const [view,setView]=useState(0);
   const scrollOffsetY=useRef(new Animated.Value(0)).current;
   const scrollToPage=new Animated.Value(0);
 
@@ -34,7 +36,7 @@ const App=()=>{
       toValue:10,
       duration:200,
       useNativeDriver:true
-    }).start()
+    }).start();
   }
 
   const over=()=>{
