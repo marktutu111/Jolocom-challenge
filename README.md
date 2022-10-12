@@ -14,7 +14,8 @@ Download the react-native typescript starter template
 
 
 # IOS Development guide
-# Cd into IOS folder
+Cd into IOS folder
+
 3. cd ios
 
 # Install IOS pod dependencies
